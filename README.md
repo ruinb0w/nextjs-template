@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nextjs-template
 
-## Getting Started
-
-First, run the development server:
-
+## install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## start dev
+```
+yarn dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## build application
+```bash
+yarn build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## rules
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Reference to [nextjs project structure](https://nextjs.org/docs/app/getting-started/project-structure) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### library
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Use `tailwind` for styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### configuration
+
+Use `public/config.json` as the single source of configuration
+
+> Note: `config.json` is just a template. The server will replace it with the actual configuration from the server side.
+
+### package manager
+
+Use yarn as package manager, make sure yarn.lock is working great, server side will build project via yarn.
+
+### Code Size Guidelines  
+
+**Components**
+- Recommended: ≤200 lines  
+- Hard limit: ≤300 lines  
+- Exceeding: Consider splitting it into subcomponents or extracting logic into custom Hooks/Libs.
+
+**Hooks**  
+- Recommended: ≤200 lines  
+- Hard limit: ≤300 lines  
+- Exceeding: Modularize logic into separate methods  
+
+**Libs**
+- Recommended: ≤500 lines  
+- Hard limit: ≤700 lines  
+- Exceeding: Split into separate files
+
+**Functions** 
+- Maximum: 50 lines  
+- Exceeding: Split into smaller functions
