@@ -17,6 +17,8 @@ yarn build
 
 ## rules
 
+*!!!Do not use empty tag `<></>`, it's will panic browser translation*
+
 
 ### project structure
 
